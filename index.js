@@ -87,7 +87,7 @@ function showQuestionBox() {
     <legend>${STORE.questions[STORE.currentQuestion].question}</legend>
     <div><img src='images/doublecrestedcormorant.jpg'></div>
     ${answers}
-    <button type="submit" class="js-next-button">Submit</button>
+    <button type="submsit" class="js-next-button">Submit</button>
     </fieldset>
     </form>  
    
