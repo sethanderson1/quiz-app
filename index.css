@@ -41,9 +41,10 @@ header {
   /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
-  border-radius: 13px;
-  background: rgba(173, 162, 136, 0.719);
-  max-width: 500px;
+  border-radius: 15px;
+  background: rgba(173, 162, 136, 0.856);
+  max-width: 400px;
+  border: 1px solid rgba(49, 61, 129, 0.404);
   /* height:400px */
 }
 
@@ -61,7 +62,7 @@ legend {
     padding:10%;
 }
 .js-question-image img,
-form img {
+form img, .js-feedback-image img {
   /* float:right; */
   display: block;
 
