@@ -6,37 +6,18 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  /* what should i put for height */
-  /* height: 1000px; */
+html {
   background-image: linear-gradient(
-      rgba(29, 27, 10, 0.2),
-      rgba(83, 80, 35, 0.2)
+      rgba(29, 27, 10, 0.589),
+      rgba(53, 51, 23, 0.61)
     ),
     url("images/desert_scene.jpg");
   background-repeat: no-repeat;
-  /* min-width: 300px; */
-  /* background-position: center top; */
-  /* background-size: cover; */
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  /* overflow: visible; */
-  /* list-style: none; */
-  /* content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/desert_scene.jpg");
+  background-position: center top;
   background-size: cover;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -54,6 +35,12 @@ header h1 {
 .js-question-number-and-score {
   font-size: 1.2em;
   text-align: center;
+  margin-bottom: 5px;
+}
+
+header h1,
+.js-question-number-and-score {
+  color: rgba(228, 227, 213, 0.808);
 }
 
 .js-question-and-answers {
@@ -62,15 +49,51 @@ header h1 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
-  background: rgba(173, 162, 136, 0.856);
-  max-width: 400px;
-  border: 1px solid rgba(49, 61, 129, 0.404);
+  background: rgba(165, 155, 129, 0.774);
+  max-width: 450px;
   /* height:400px */
+  font-size: 1.3em;
+  border: 1px solid rgba(49, 61, 129, 0.404);
+
 }
 
-.js-welcome {
+fieldset legend, .form-options {
+  color: rgb(31, 45, 66);
+
+}
+
+
+
+.welcome-title {
+  font-size: 1.5em;
+  margin:3%;
+  /* margin-top:1%; */
+}
+
+.welcome-message {
+  /* max-width: 90%; */
+  font-size: 1.1em;
+  display: block;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  /* border: 2px solid rgba(78, 78, 141, 0.24);
+  border-radius: 9px; */
+}
+
+.welcome-title,
+.welcome-message,
+.js-correct-or-not h3,
+.js-correct-ans-was h3,
+.result-final-score {
+  color: rgb(226, 219, 187);
+}
+
+.js-welcome, .result-final-score, .js-results {
   text-align: center;
 }
+
+
 
 fieldset {
   padding: 0;
@@ -78,8 +101,24 @@ fieldset {
   margin: 0;
 }
 
+.form-options {
+  margin-left: 5%;
+  margin-right: 5%;
+
+  margin-top: 5%;
+}
+
+.form-options label {
+/* padding-left: 20px; */
+
+}
+
+.inputs-labels {
+  display: block;
+}
+
 legend {
-  padding: 10%;
+  padding: 6%;
 }
 .js-question-image img,
 form img,
@@ -87,12 +126,29 @@ form img,
 .js-display-image img {
   /* float:right; */
   display: block;
-
   margin-left: auto;
   margin-right: auto;
-  max-width: 85%;
+  max-width: 90%;
   border: 2px solid rgba(78, 78, 141, 0.24);
   border-radius: 9px;
+}
+
+.result-final-score {
+
+}
+
+.js-correct-or-not h3,
+.js-correct-ans-was h3 {
+  text-align: center;
+  margin:5%;
+
+}
+
+.js-correct-or-not h3 {
+  font-size: 1.8em;
+}
+
+.js-correct-ans-was {
 }
 
 button {
