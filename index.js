@@ -1,4 +1,8 @@
 
+
+
+
+
 const STORE = {
   currentQuestionNum: 0,
   answeredCorrectly: 0,
