@@ -54,7 +54,6 @@ const QUESTION_BOX = $(".js-question-and-answers");
 const QUIZ_STATUS = $(".js-question-number-and-score");
 
 function displayWelcome() {
-  console.log(`displayWelcome() invoked`);
   QUESTION_BOX.html(
     `<h2 class="welcome-title">Welcome!</h2>
                   <div class="js-question-image">
@@ -68,7 +67,6 @@ function displayWelcome() {
 }
 
 function startQuiz() {
-  console.log(`startQuiz() invoked`);
   STORE.currentQuestionNum = 0;
   STORE.quizStarted = false;
   STORE.answeredCorrectly = 0;
@@ -77,7 +75,6 @@ function startQuiz() {
 }
 
 function handleRestartQuiz() {
-  console.log(`handleRestartQuiz() invoked`);
   QUESTION_BOX.on("click", ".js-restart-button", function(event) {
     QUESTION_BOX.removeClass("js-results")
     startQuiz();
@@ -85,7 +82,6 @@ function handleRestartQuiz() {
 }
 
 function displayQuestionNumberAndScore() {
-  console.log("displayQuestionNumberAndScore() invoked");
   // this expression prevents displaying as question 6/5.
   // makes sure that it only displays up to 5/5
   const quesNumber =
@@ -97,7 +93,6 @@ function displayQuestionNumberAndScore() {
 }
 
 function displayQuestionBox() {
-  console.log(`displayQuestionBox() invoked`);
   QUESTION_BOX.html(
     `<form id="js-questions">
               <fieldset>
@@ -114,14 +109,12 @@ function displayQuestionBox() {
 }
 
 function displayQuestion() {
-  console.log(`displayQuestion() invoked`);
   const question = getQuestion();
   const htmlQuestionString = `<legend>${question}</legend>`;
   return htmlQuestionString;
 }
 
 function displayOptions() {
-  console.log(`displayOptions() invoked`);
   const options = getOptions();
   // ** get rid of <br> below
   const htmlOptionsString = options
@@ -135,49 +128,39 @@ function displayOptions() {
 }
 
 function displayQuestionImage() {
-  console.log(`displayQuestionImage() invoked`);
   const image = getQuesImage();
   const htmlImageString = `<div><img src="${image}" /></div>`;
   return htmlImageString;
 }
 
 function getQuestion() {
-  console.log(`getQuestion() invoked`);
   return STORE.questions[STORE.currentQuestionNum].question;
 }
 
 function getOptions() {
-  console.log(`getOptions() invoked`);
   return STORE.questions[STORE.currentQuestionNum].answers;
 }
 
 function getQuesImage() {
-  console.log(`getQuesImage() invoked`);
   return STORE.questions[STORE.currentQuestionNum].image;
 }
 
 function handleClickStart() {
-  console.log(`handleClickStart() invoked`);
   QUESTION_BOX.on("click", "#js-start-button", function(event) {
-    console.log("start button clicked");
     STORE.quizStarted = true;
-    // STORE.currentQuestionNum++;
     QUESTION_BOX.removeClass("js-welcome");
     startQuiz();
   });
 }
 
 function handleSubmitAnswer() {
-  console.log(`handleSubmitAnswer() invoked`);
   QUESTION_BOX.on("click", "#js-submit-answer", function(event) {
-    console.log("submit answer clicked");
     event.preventDefault();
     evaluateAnswer($("#js-questions input:checked").val());
   });
 }
 
 function evaluateAnswer(userAnswer) {
-  console.log(`evaluateAnswer() invoked`);
   if (userAnswer === undefined) {
     alert("Please choose an answer");
     return;
@@ -187,14 +170,12 @@ function evaluateAnswer(userAnswer) {
 }
 
 function getCorrectAnswerIndex() {
-  console.log(`getcorrectAnswerIndex() invoked`);
   const correctAnswerIndex =
     STORE.questions[STORE.currentQuestionNum].correctAnswerIndex;
   return correctAnswerIndex;
 }
 
 function getCorrectAnswer() {
-  console.log(`getcorrectAnswer() invoked`);
   const correctAnswer =
     STORE.questions[STORE.currentQuestionNum].answers[getCorrectAnswerIndex()];
   return correctAnswer;
@@ -211,28 +192,21 @@ function displayFeedback(isCorrect) {
                   <div class="js-correct-ans-was"><h3>${displayFeedbackAnswer()}</h3></div>
                   <button type="submit" class="js-next-question">Next</button>`
   );
-
   if (isCorrect === true) {
     STORE.answeredCorrectly++;
   }
-  // STORE.currentQuestionNum++;
   displayQuestionNumberAndScore();
 }
 
 function displayFeedbackEvaluation(isCorrect) {
-  console.log(`displayFeedbackEvaluation() invoked`);
-
   if (isCorrect === true) {
     return `That's correct!`;
   } else {
     return `That's incorrect`;
   }
-  // const evaluation = getFeedbackEvaluation();
 }
 
 function displayFeedbackImage(isCorrect) {
-  console.log(`displayFeedbackImage() invoked`);
-
   if (isCorrect === true) {
     return STORE.correctAnsImage;
   } else {
@@ -241,19 +215,13 @@ function displayFeedbackImage(isCorrect) {
 }
 
 function displayFeedbackAnswer(isCorrect) {
-  console.log(`displayFeedbackAnswer() invoked`);
   return `The correct answer was: ${getCorrectAnswer()}`;
 }
 
 
 function handleClickNext() {
-  console.log("handleClickNext() was invoked");
   QUESTION_BOX.on("click", ".js-next-question", function(event) {
-    console.log(
-      `next button clicked, current question number is ${STORE.currentQuestionNum}`
-    );
     event.preventDefault();
-    console.log(`question incremented`);
     STORE.currentQuestionNum++;
     displayQuestionNumberAndScore();
     if (STORE.currentQuestionNum < STORE.totalQuestions) {
@@ -265,7 +233,6 @@ function handleClickNext() {
 }
 
 function displayResults() {
-  console.log("displayResults() was invoked");
   QUESTION_BOX.html(
     `<h3 class="result-final-score">Your answered ${STORE.answeredCorrectly} 
     out of ${STORE.totalQuestions} questions correctly</h3>
@@ -278,19 +245,11 @@ function displayResults() {
 
 }
 
-function displayScore() {
-  console.log("displayScore() was invoked");
-
-  return "5/5";
-}
-
 function displayResultsImage() {
-  console.log(`displayResultsImage() invoked`);
   return STORE.resultsImage;
 }
 
 function makeQuiz() {
-  console.log(`makeQuiz() invoked`);
   handleSubmitAnswer();
   handleClickStart();
   handleClickNext();
