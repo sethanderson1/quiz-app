@@ -1,4 +1,3 @@
-// ** make it so that you have to pick an answer. cants submit otherwise
 
 const STORE = {
   currentQuestionNum: 0,
