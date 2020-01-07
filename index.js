@@ -1,15 +1,8 @@
-
-
-
-
-
 const STORE = {
   currentQuestionNum: 0,
   answeredCorrectly: 0,
   totalQuestions: 5,
-  // **remember to set this to false
   quizStarted: false,
-
   correctAnsImage: "images/correct_owl.png",
   incorrectAnsImage: "images/confused_owl.png",
   resultsImage: "images/final_results.png",
@@ -33,7 +26,6 @@ const STORE = {
       correctAnswerIndex: 2,
       image: "images/roadrunner.jpg"
     },
-
     {
       question:
         "Which of the following is true about the Double-crested cormorant?",
@@ -251,16 +243,8 @@ function displayFeedbackImage(isCorrect) {
 function displayFeedbackAnswer(isCorrect) {
   console.log(`displayFeedbackAnswer() invoked`);
   return `The correct answer was: ${getCorrectAnswer()}`;
-  // const answer = getFeedbackAnswer();
 }
 
-// function getFeedbackEvaluation() {}
-
-// function getFeedbackAnswer() {}
-
-// function getFeedbackImage() {
-//   // console.log(`getFeedbackImage() invoked`)
-// }
 
 function handleClickNext() {
   console.log("handleClickNext() was invoked");

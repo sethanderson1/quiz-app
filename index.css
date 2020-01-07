@@ -21,7 +21,7 @@ html {
 }
 
 .container {
-  min-width: 300px;
+  min-width: 290px;
 }
 
 header h1 {
@@ -29,7 +29,6 @@ header h1 {
   font-size: 1.4em;
   padding: 0.3em;
   margin: 0;
-  /* margin-top: 3%; */
 }
 
 .js-question-number-and-score {
@@ -44,41 +43,29 @@ header h1,
 }
 
 .js-question-and-answers {
-  /* display: inline-block; */
-  /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
   background: rgba(165, 155, 129, 0.774);
   max-width: 450px;
-  /* height:400px */
   font-size: 1.3em;
   border: 1px solid rgba(49, 61, 129, 0.404);
-
 }
 
 fieldset legend, .form-options {
   color: rgb(31, 45, 66);
-
 }
-
-
 
 .welcome-title {
   font-size: 1.5em;
   margin:3%;
-  /* margin-top:1%; */
 }
 
 .welcome-message {
-  /* max-width: 90%; */
   font-size: 1.1em;
   display: block;
-
   margin-left: 10%;
   margin-right: 10%;
-  /* border: 2px solid rgba(78, 78, 141, 0.24);
-  border-radius: 9px; */
 }
 
 .welcome-title,
@@ -93,8 +80,6 @@ fieldset legend, .form-options {
   text-align: center;
 }
 
-
-
 fieldset {
   padding: 0;
   border: 0;
@@ -104,13 +89,7 @@ fieldset {
 .form-options {
   margin-left: 5%;
   margin-right: 5%;
-
   margin-top: 5%;
-}
-
-.form-options label {
-/* padding-left: 20px; */
-
 }
 
 .inputs-labels {
@@ -120,11 +99,11 @@ fieldset {
 legend {
   padding: 6%;
 }
+
 .js-question-image img,
 form img,
 .js-feedback-image img,
 .js-display-image img {
-  /* float:right; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -133,22 +112,14 @@ form img,
   border-radius: 9px;
 }
 
-.result-final-score {
-
-}
-
 .js-correct-or-not h3,
 .js-correct-ans-was h3 {
   text-align: center;
   margin:5%;
-
 }
 
 .js-correct-or-not h3 {
   font-size: 1.8em;
-}
-
-.js-correct-ans-was {
 }
 
 button {
